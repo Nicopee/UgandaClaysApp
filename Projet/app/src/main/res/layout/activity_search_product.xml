@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/roboto_light"
-            android:hint="Numéro de téléphone"
+            android:hint="Phone number"
             android:inputType="text"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/product_search"
-            android:text="Recherche"
+            android:text="Research"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="30dp"/>

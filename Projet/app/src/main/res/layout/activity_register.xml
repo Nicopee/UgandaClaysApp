@@ -20,7 +20,7 @@
             android:layout_height="114dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:src="@drawable/zoura"
+            android:src="@drawable/logo_transparent"
             android:text="Welcome Back"
             android:textColor="#171717" />
 

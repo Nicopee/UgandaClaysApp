@@ -87,7 +87,7 @@
                 android:id="@+id/laptop_pc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sélectionner"
+                android:text="Select"
                 android:textColor="@color/colorPrimary"
                 android:background="@color/colorWhite"
                 android:gravity="center"

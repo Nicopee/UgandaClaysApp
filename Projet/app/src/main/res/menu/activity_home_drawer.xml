@@ -7,18 +7,18 @@
         <item
             android:id="@+id/nav_cart"
             android:icon="@drawable/nav_cart"
-            android:title="Panier"
+            android:title="Basket"
             android:iconTint="@android:color/white"
             />
         <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_action_search"
-            android:title="Rechercher"
+            android:title="Search"
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_laptop"
             android:icon="@drawable/iconslaptop"
-            android:title="Ordinateur"
+            android:title="Computer"
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_smart"
@@ -33,12 +33,12 @@
         <item
             android:id="@+id/nav_shoes"
             android:icon="@drawable/iconsshoes"
-            android:title="Chaussures"
+            android:title="Shoes"
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Paramétres"
+            android:title="Settings"
             android:iconTint="@android:color/white" />
 
         <item
