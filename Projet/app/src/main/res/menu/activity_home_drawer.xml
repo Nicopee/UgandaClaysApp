@@ -17,13 +17,13 @@
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_laptop"
-            android:icon="@drawable/iconslaptop"
-            android:title="Computer"
+            android:icon="@drawable/brick"
+            android:title="Bricks"
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_smart"
             android:icon="@drawable/iconssmartphone"
-            android:title="Smartphone"
+            android:title="Grills"
             android:iconTint="@android:color/white"/>
         <item
             android:id="@+id/nav_dress"

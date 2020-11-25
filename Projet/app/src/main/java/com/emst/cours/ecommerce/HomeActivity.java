@@ -30,6 +30,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
@@ -110,10 +113,20 @@ public class HomeActivity extends AppCompatActivity
                     @Override
                     protected void onBindViewHolder(@NonNull ProductView holder, int position, @NonNull final Product model)
                     {
-                        holder.txtProductName.setText(model.getPname());
-                        holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtProductPrice.setText(model.getPrice());
-                        Picasso.get().load(model.getImage()).into(holder.imageView);
+
+                        String[] products = new String[]{"Nike", "MERCADO","Scarpin","VINO BORGONA", "chuno"};
+
+                        // Convert String Array to List
+                        List<String> list = Arrays.asList(products);
+
+                        if(list.contains(model.getPname())){
+                            holder.txtProductName.setText("Not Specified");
+                        }else {
+                            holder.txtProductName.setText(model.getPname());
+                            holder.txtProductDescription.setText(model.getDescription());
+                            holder.txtProductPrice.setText(model.getPrice());
+                            Picasso.get().load(model.getImage()).into(holder.imageView);
+                        }
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override

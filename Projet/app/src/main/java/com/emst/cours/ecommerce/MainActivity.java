@@ -34,5 +34,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    public void GoAdmin(View view){
+        Intent intent = new Intent(MainActivity.this,AdminHomeActivity.class);
+        startActivity(intent);
     }
 }

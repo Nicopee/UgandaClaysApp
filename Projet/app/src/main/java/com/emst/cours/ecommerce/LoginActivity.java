@@ -94,16 +94,19 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Your number please...", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please enter your password...", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        else {
             loadingBar.setTitle("Login");
             loadingBar.setMessage("Please wait patiently");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
+
             allowAccessToAccount(phone, password);
         }
     }
 
     private void allowAccessToAccount(final String phone, final String password) {
+
         final DatabaseReference databaseReference;
         databaseReference = FirebaseDatabase.getInstance().getReference();
 

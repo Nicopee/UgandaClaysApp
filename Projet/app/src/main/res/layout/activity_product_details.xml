@@ -59,9 +59,9 @@
                 android:layout_height="fill_parent"
                 android:layout_centerInParent="true"
                 android:layout_margin="2dp"
-                android:background="@drawable/product_page_view_border"
+                android:background="@drawable/bricks"
                 android:padding="5dp"
-                android:src="@drawable/shoess"
+                android:src="@drawable/bricks"
                 android:tag="open_gallery_view" />
 
             <LinearLayout

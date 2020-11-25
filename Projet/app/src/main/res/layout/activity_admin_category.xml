@@ -45,7 +45,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center"
-            android:background="@drawable/laptops"/>
+            android:background="@drawable/bricks"/>
 
         <LinearLayout
             android:layout_weight="1"
@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Computers"
+                android:text="Bricks"
                 android:textSize="16dp"
                 android:textColor="#2d2d2d"
                 android:layout_marginTop="3dp"
@@ -113,7 +113,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center"
-            android:background="@drawable/female_dresses"/>
+            android:background="@drawable/ventilator"/>
 
         <LinearLayout
             android:layout_weight="1"
@@ -134,7 +134,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Robes"
+                android:text="Ventilators"
                 android:textSize="16dp"
                 android:textColor="#2d2d2d"
                 android:layout_marginTop="3dp"
@@ -181,7 +181,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center"
-            android:background="@drawable/shoess"/>
+            android:background="@drawable/roofingtiles"/>
 
         <LinearLayout
             android:layout_weight="1"
@@ -202,7 +202,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chaussures"
+                android:text="Roofing Tiles"
                 android:textSize="16dp"
                 android:textColor="#2d2d2d"
                 android:layout_marginTop="3dp"
@@ -249,7 +249,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center"
-            android:background="@drawable/mobiles"/>
+            android:background="@drawable/grills"/>
 
         <LinearLayout
             android:layout_weight="1"
@@ -270,7 +270,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Smartphones"
+                android:text="Decorative Grills"
                 android:textSize="16dp"
                 android:textColor="#2d2d2d"
                 android:layout_marginTop="3dp"
