@@ -114,13 +114,14 @@ public class HomeActivity extends AppCompatActivity
                     protected void onBindViewHolder(@NonNull ProductView holder, int position, @NonNull final Product model)
                     {
 
-                        String[] products = new String[]{"Nike", "MERCADO","Scarpin","VINO BORGONA", "chuno"};
+                        String[] products = new String[]{"Nike","HUAYCO","SILLAO", "MERCADO","Scarpin","VINO BORGONA", "chuno","Robe","Iphone X","CEBOLLA","cocoa","Marta Paz Cumapa","aaa","cabello de angel","LECHE ANCHOR","Coutume","MORALES","Lenovo","I don't now","arroz","ji","aceite primor","CASILLERO DE HUEVO","Coutume","Costume","Homero","TARAPOTO","filete de atun","Balenciaga","Pudeure","AZUCAR","HUEQUITO","Ana cecilia grandes","hhh","Talon haute","Iphone XS","VENDEDOR1","Thiarakh","ajino men","Huawei","Samsung","VENDEDORA HUEQUITO","Asus","HP","Mac book","HUEQUITO"};
 
                         // Convert String Array to List
                         List<String> list = Arrays.asList(products);
 
                         if(list.contains(model.getPname())){
-                            holder.txtProductName.setText("Not Specified");
+                            holder.txtProductName.setText("Nice Bricks");
+                            Picasso.get().load(R.drawable.brick).into(holder.imageView);
                         }else {
                             holder.txtProductName.setText(model.getPname());
                             holder.txtProductDescription.setText(model.getDescription());
