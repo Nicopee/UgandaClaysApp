@@ -36,7 +36,8 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
-
+//This Home Activity is one displaying the products on a recyclerview.
+// A recyclerview is like an advanced listview and can display a good number of products
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {

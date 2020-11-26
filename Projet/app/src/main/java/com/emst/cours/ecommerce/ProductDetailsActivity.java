@@ -71,7 +71,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 }else if(Prevalent.currentOnlineUser != null){
                     addingToCard();
                 }else{
-
                     Intent loginIntent = new Intent(ProductDetailsActivity.this, MainActivity.class);
                     startActivity(loginIntent);
                 }

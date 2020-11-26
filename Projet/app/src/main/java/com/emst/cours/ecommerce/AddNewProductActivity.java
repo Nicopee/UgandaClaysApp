@@ -93,7 +93,7 @@ public class AddNewProductActivity extends AppCompatActivity
     }
 
 
-
+    //This method is responsible for opening the image gallery on your phone when uploading a new product.
     private void openGallery()
     {
         Intent galleryIntent = new Intent();
