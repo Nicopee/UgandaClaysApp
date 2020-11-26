@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                             }else if (parentDbName == "Users"){
                                 Toast.makeText(LoginActivity.this, "welcome ...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
-                                Prevalent.currentOnlineUser = userDate;
+                                Prevalent.currentOnlineUser  = userDate;
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);
                             }
