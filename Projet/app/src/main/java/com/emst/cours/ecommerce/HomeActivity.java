@@ -114,25 +114,12 @@ public class HomeActivity extends AppCompatActivity
                     protected void onBindViewHolder(@NonNull ProductView holder, int position, @NonNull final Product model)
                     {
 
-                        String[] products = new String[]{"Nike","HUAYCO","SILLAO", "MERCADO","Scarpin","VINO BORGONA", "chuno","Robe","Iphone X","CEBOLLA","cocoa","Marta Paz Cumapa","aaa","cabello de angel","LECHE ANCHOR","Coutume","MORALES","Lenovo","I don't now","arroz","ji","aceite primor","CASILLERO DE HUEVO","Coutume","Costume","Homero","TARAPOTO","filete de atun","Balenciaga","Pudeure","AZUCAR","HUEQUITO","Ana cecilia grandes","hhh","Talon haute","Iphone XS","VENDEDOR1","Thiarakh","ajino men","Huawei","Samsung","VENDEDORA HUEQUITO","Asus","HP","Mac book","HUEQUITO"};
-
+                        String[] products = new String[]{"Asus", "JUANITA GUERRERO HOYOS", "Nike","HUAYCO","SILLAO", "MERCADO","Scarpin","VINO BORGONA", "chuno","Robe","Iphone X","CEBOLLA","cocoa","Marta Paz Cumapa","aaa","cabello de angel","LECHE ANCHOR","Coutume","MORALES","Lenovo","I don't now","arroz","ji","aceite primor","CASILLERO DE HUEVO","Coutume","Costume","Homero","TARAPOTO","filete de atun","Balenciaga","Pudeure","AZUCAR","HUEQUITO","Ana cecilia grandes","hhh","Talon haute","Iphone XS","VENDEDOR1","Thiarakh","ajino men","Huawei","Samsung","VENDEDORA HUEQUITO","Asus","HP","Mac book","HUEQUITO"};
+                        String[] prices = new String[]{"3","29","1","250","345","47","1250","320","20","128","11"};
                         // Convert String Array to List
                         List<String> list = Arrays.asList(products);
 
-//                        if(model.getPname().trim().equals("Nike")){
-//                            holder.txtProductName.setVisibility(View.GONE);
-//                            holder.txtProductDescription.setVisibility(View.GONE);
-//                            holder.txtProductPrice.setVisibility(View.GONE);
-//                            holder.imageView.setVisibility(View.GONE);
-//                            holder.txtCurrency.setVisibility(View.GONE);
-//                            holder.linearLayout.setVisibility(View.GONE);
-//                        }else {
-//                            holder.txtProductName.setText(model.getPname());
-//                            holder.txtProductDescription.setText(model.getDescription());
-//                            holder.txtProductPrice.setText(model.getPrice());
-//                            Picasso.get().load(model.getImage()).into(holder.imageView);
-//
-//                        }
+                        List<String> myPrice = Arrays.asList(prices);
 
                         if(list.contains(model.getPname())){
                             holder.txtProductName.setVisibility(View.GONE);
@@ -141,6 +128,15 @@ public class HomeActivity extends AppCompatActivity
                             holder.imageView.setVisibility(View.GONE);
                             holder.txtCurrency.setVisibility(View.GONE);
                             holder.linearLayout.setVisibility(View.GONE);
+                        }else if(myPrice.contains(model.getPrice())) {
+                            holder.txtProductName.setVisibility(View.GONE);
+                            holder.txtProductDescription.setVisibility(View.GONE);
+                            holder.txtProductPrice.setVisibility(View.GONE);
+                            holder.imageView.setVisibility(View.GONE);
+                            holder.txtCurrency.setVisibility(View.GONE);
+                            holder.linearLayout.setVisibility(View.GONE);
+
+
                         }else {
                             holder.txtProductName.setText(model.getPname());
                             holder.txtProductDescription.setText(model.getDescription());

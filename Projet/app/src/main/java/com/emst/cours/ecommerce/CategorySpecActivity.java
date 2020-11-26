@@ -20,6 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CategorySpecActivity extends AppCompatActivity {
 
     private String category;
@@ -47,7 +50,15 @@ public class CategorySpecActivity extends AppCompatActivity {
 
 
         category = getIntent().getExtras().get("category").toString();
-        cate.setText(category);
+        if(category.trim().equals("Computers")){
+            cate.setText("Bricks");
+        }else if(category.trim().equals("Smartphones")){
+            cate.setText("Decoration Grills");
+        }else if(category.trim().equals("Robes")){
+            cate.setText("Ventilators");
+        }else if(category.trim().equals("Shoes")){
+            cate.setText("Roofing Tiles");
+        }
 
         category_list = findViewById(R.id.category_list);
         category_list.setLayoutManager(new LinearLayoutManager(CategorySpecActivity.this));
@@ -66,10 +77,33 @@ public class CategorySpecActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Product, ProductView> adapter = new FirebaseRecyclerAdapter<Product, ProductView>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ProductView holder, int position, @NonNull final Product model) {
-                holder.txtProductName.setText(model.getPname());
-                holder.txtProductDescription.setText(model.getDescription());
-                holder.txtProductPrice.setText(model.getPrice());
-                Picasso.get().load(model.getImage()).into(holder.imageView);
+                String[] products = new String[]{"Asus", "JUANITA GUERRERO HOYOS", "Nike","HUAYCO","SILLAO", "MERCADO","Scarpin","VINO BORGONA", "chuno","Robe","Iphone X","CEBOLLA","cocoa","Marta Paz Cumapa","aaa","cabello de angel","LECHE ANCHOR","Coutume","MORALES","Lenovo","I don't now","arroz","ji","aceite primor","CASILLERO DE HUEVO","Coutume","Costume","Homero","TARAPOTO","filete de atun","Balenciaga","Pudeure","AZUCAR","HUEQUITO","Ana cecilia grandes","hhh","Talon haute","Iphone XS","VENDEDOR1","Thiarakh","ajino men","Huawei","Samsung","VENDEDORA HUEQUITO","Asus","HP","Mac book","HUEQUITO"};
+                String[] prices = new String[]{"3","29","1","250","345","47","1250","320","20","128","11"};
+                // Convert String Array to List
+                List<String> list = Arrays.asList(products);
+
+                List<String> myPrice = Arrays.asList(prices);
+
+                if(list.contains(model.getPname())){
+                    holder.txtProductName.setVisibility(View.GONE);
+                    holder.txtProductDescription.setVisibility(View.GONE);
+                    holder.txtProductPrice.setVisibility(View.GONE);
+                    holder.imageView.setVisibility(View.GONE);
+                    holder.txtCurrency.setVisibility(View.GONE);
+                    holder.linearLayout.setVisibility(View.GONE);
+                }else if(myPrice.contains(model.getPrice())) {
+                    holder.txtProductName.setVisibility(View.GONE);
+                    holder.txtProductDescription.setVisibility(View.GONE);
+                    holder.txtProductPrice.setVisibility(View.GONE);
+                    holder.imageView.setVisibility(View.GONE);
+                    holder.txtCurrency.setVisibility(View.GONE);
+                    holder.linearLayout.setVisibility(View.GONE);
+                }else {
+                    holder.txtProductName.setText(model.getPname());
+                    holder.txtProductDescription.setText(model.getDescription());
+                    holder.txtProductPrice.setText(model.getPrice());
+                    Picasso.get().load(model.getImage()).into(holder.imageView);
+                }
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
