@@ -103,8 +103,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/roboto_light"
-        android:text="
-I am an administrator"
         android:textSize="17.3sp" />
 
     <TextView

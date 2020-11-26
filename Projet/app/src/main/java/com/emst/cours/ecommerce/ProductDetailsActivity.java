@@ -72,7 +72,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     addingToCard();
                 }else{
 
-                    Intent loginIntent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
+                    Intent loginIntent = new Intent(ProductDetailsActivity.this, MainActivity.class);
                     startActivity(loginIntent);
                 }
             }

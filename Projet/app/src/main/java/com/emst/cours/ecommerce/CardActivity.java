@@ -83,7 +83,14 @@ public class CardActivity extends AppCompatActivity {
     protected void onStart() {
 
         super.onStart();
-        myCommand();
+
+        if(Prevalent.currentOnlineUser != null){
+            myCommand();
+        }else {
+            Intent loginIntent = new Intent(CardActivity.this, MainActivity.class);
+            startActivity(loginIntent);
+        }
+
 
         final DatabaseReference cardListRef = FirebaseDatabase.getInstance().getReference().child("Card List");
 
