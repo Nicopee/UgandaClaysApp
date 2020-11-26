@@ -68,9 +68,12 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                     Toast.makeText(ProductDetailsActivity.this, "Please wait for the confirmation of your previous order", Toast.LENGTH_LONG).show();
                     
-                }
-                else {
+                }else if(Prevalent.currentOnlineUser != null){
                     addingToCard();
+                }else{
+
+                    Intent loginIntent = new Intent(ProductDetailsActivity.this, LoginActivity.class);
+                    startActivity(loginIntent);
                 }
             }
         });
@@ -81,7 +84,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        myCommand();
     }
 
     private void addingToCard() {
@@ -150,6 +152,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     }
 
     private void myCommand() {
+
         DatabaseReference reference;
         reference = FirebaseDatabase.getInstance().getReference().child("Command").child(Prevalent.currentOnlineUser.getPhone());
         reference.addValueEventListener(new ValueEventListener() {
