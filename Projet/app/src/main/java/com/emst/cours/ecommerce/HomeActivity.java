@@ -119,9 +119,28 @@ public class HomeActivity extends AppCompatActivity
                         // Convert String Array to List
                         List<String> list = Arrays.asList(products);
 
+//                        if(model.getPname().trim().equals("Nike")){
+//                            holder.txtProductName.setVisibility(View.GONE);
+//                            holder.txtProductDescription.setVisibility(View.GONE);
+//                            holder.txtProductPrice.setVisibility(View.GONE);
+//                            holder.imageView.setVisibility(View.GONE);
+//                            holder.txtCurrency.setVisibility(View.GONE);
+//                            holder.linearLayout.setVisibility(View.GONE);
+//                        }else {
+//                            holder.txtProductName.setText(model.getPname());
+//                            holder.txtProductDescription.setText(model.getDescription());
+//                            holder.txtProductPrice.setText(model.getPrice());
+//                            Picasso.get().load(model.getImage()).into(holder.imageView);
+//
+//                        }
+
                         if(list.contains(model.getPname())){
-                            holder.txtProductName.setText("Nice Bricks");
-                            Picasso.get().load(R.drawable.brick).into(holder.imageView);
+                            holder.txtProductName.setVisibility(View.GONE);
+                            holder.txtProductDescription.setVisibility(View.GONE);
+                            holder.txtProductPrice.setVisibility(View.GONE);
+                            holder.imageView.setVisibility(View.GONE);
+                            holder.txtCurrency.setVisibility(View.GONE);
+                            holder.linearLayout.setVisibility(View.GONE);
                         }else {
                             holder.txtProductName.setText(model.getPname());
                             holder.txtProductDescription.setText(model.getDescription());

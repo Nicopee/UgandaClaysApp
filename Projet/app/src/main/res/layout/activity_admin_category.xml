@@ -62,7 +62,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold"/>
 
-
+//computer
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold"/>
 
-
+//robes
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -257,7 +257,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
-
+//shoe
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -266,7 +266,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold"/>
 
-
+//smart4ns
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
